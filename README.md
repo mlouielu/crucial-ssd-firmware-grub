@@ -78,6 +78,12 @@ You can easily config which SSD firmware you need to used by editing
 name and url by tab. If you don want the firmware, simply delete the line or
 using `#` to comment out.
 
+### Remove
+
+After upgrading your firmware, you may want to remove the iso and grub file.
+
+Simply remove directory `/boot/crucial-fw` and `/etc/grub.d/45_crucial_fw`,
+then regenerate GRUB2 by `update-grub2` or `grub-mkconfig`, well done.
 
 ### Thanks
 
