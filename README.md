@@ -78,6 +78,24 @@ You can easily config which SSD firmware you need to used by editing
 name and url by tab. If you don want the firmware, simply delete the line or
 using `#` to comment out.
 
+### Check your SSD firmware version
+
+In linux, you can use `hdparm` to check your SSD firmware version
+
+```sh
+$ sudo hdparm -I /dev/sda
+
+/dev/sda:
+
+ATA device, with non-removable media
+	Model Number:       Crucial_CT250MX200SSD1                  
+	Serial Number:      15311040EEE8
+	Firmware Revision:  MU03    
+	Transport:          Serial, ATA8-AST, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+```
+
+In this example, firmware revision is `MU03`
+
 ### Remove
 
 After upgrading your firmware, you may want to remove the iso and grub file.
